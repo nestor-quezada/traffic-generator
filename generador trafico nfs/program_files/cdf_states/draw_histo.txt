@@ -1,0 +1,19 @@
+set title "Desviación estándar  20 min xvar 13 estados"
+set style fill solid
+#set logscale y 10
+
+set style data histograms
+set style histogram clustered gap 1
+set terminal size 1300,600
+plot 'sd_times_13e_20mins_xvar.txt' u 1:2 with boxes notitle
+#plot 'porcentajes_globales_w_r_13e_20mins.txt' u 2:xtic(1)  t "Lecturas"
+#replot 'porcentajes_globales_w_r_13e_20mins.txt' u 3:xtic(1) t "Escrituras"
+#replot 'porcentajes_globales_w_r_13e_20mins.txt' u 4:xtic(1) lc "blue" t "Ambas"
+
+
+
+
+set ylabel "Tiempos entre llegadas(s)"
+set xlabel "Estados"
+set style data histograms
+set style histogram clustered gap 1

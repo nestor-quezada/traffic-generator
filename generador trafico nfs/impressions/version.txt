@@ -1,0 +1,5 @@
+Versión generadora solo de .PDF.
+La semilla para generar las palabras hemos visto que es el instante temporal.
+Se ha cambiado la generación de secuencia aleatoria. Ahora la primera vez que quiere generar una secuencia, pone la semilla (puesta en el fichero inputfile) y luego para próximas veces genera un numero aleatorio de esa secuencia. 
+Comprobado que si pones la misma semilla genera mismos directorios, con mismos ficheros, tamaños y contenidos.
+Si pones otra semilla cambia todo lo anterior.

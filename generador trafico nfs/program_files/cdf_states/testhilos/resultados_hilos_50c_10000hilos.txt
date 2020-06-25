@@ -1,0 +1,5 @@
+Resultados test:
+Parámetro entrada:
++ Número contenedores=50
++ Número iteraciones=10000
+Metodo 1 0.000987858152 ms/hilo

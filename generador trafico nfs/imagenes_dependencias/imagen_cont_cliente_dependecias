@@ -1,0 +1,37 @@
+- SMB
+- Python3
+- at(programar ejecucion tarea)
+
+# 1º Instalar imagen alpine, esta servira de modelo para todos los clientes que se creen
+lxc launch images:alpine/3.10 alpine-cliente
+
+# 2º instalar python3 en el contenedor
+apk add python3
+
+# 3º instalar AT utility para programar la ejecución del script
+apk add at
+
+# 4º hacer que el servicio se ejecute al arrancar
+rc-update add atd default
+rc-service atd restart
+
+# 5º mover el script main_app_client.py al contenedor
+
+# º6 Crear alias al contenedor
+lxc image alias create trusty 04aac4257341
+
+# Timezone
+https://wiki.alpinelinux.org/wiki/Setting_the_timezone
+
+# 7º samba
+# Dependencias SMB
+apk add samba
+apk add cifs-utils
+
+##8º crear directorio shared
+mkdir /mnt/shared
+chmod +wrx /mnt/shared
+
+#9º
+lxc file push main_app_client.py  imagen-cliente/home/
+lxc file push traffic_generator_client.py  imagen-cliente/home/
